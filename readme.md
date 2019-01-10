@@ -1,6 +1,6 @@
 ## web shell
 
-해당 기법들은 개인용으로 참조하시기 바랍니다.
+해당 기법들은 공부용으로만 사용하기 바랍니다.
 
 업로드 취약점을 통해 시스템에 명령을 내릴수 있는 코드를 칭하지만 내부적인 코드로 인해서 발생할수 있다.
 
@@ -92,14 +92,22 @@ env x='() { :;}; echo vulnerable' bash -c "echo this is a test"
 ## 예방법
 
 - 웹 서버의 파일 업로드 취약점 제거
+
 - 파일 업로드 폴더의 실행 제한
-- 웹 서버의 실행을 root로 하지말기
+
+- 웹 서버의 실행을 root로 하지말기(이는 예방법은 아니고 최소한의 피해를 방지하기 위한 보호법이라고 보는게 좋다.)
+
+## 타 언어의 webShell
+
+Node :  https://s1gnalcha0s.github.io/node/2015/01/31/SSJS-webshell-injection.html
+eval같은 취약함수 때문에 발생하기때문에 사용에 주의가 필요하다.
+
+
+asp : https://github.com/tennc/webshell/blob/master/asp/webshell.asp
 
 
 ## 참조
 
 https://null-byte.wonderhowto.com/how-to/exploit-shellshock-web-server-using-metasploit-0186084
-
-https://s1gnalcha0s.github.io/node/2015/01/31/SSJS-webshell-injection.html
 
 http://www.r57.gen.tr/
