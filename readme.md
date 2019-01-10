@@ -12,8 +12,6 @@
 # 시작하기
 
 
-해당 파일시작하기
-
 테스트 PHP-fpm-Apache을 설치해야한다. 
 
 해당 설치는 도커파일로 대체한다. 다음과 같은 커멘드를 입력하게되면 위의 세팅이 들어간 도커가 실행된다.
@@ -40,24 +38,24 @@ docker run --rm -p 80:80 -v <sourcePath>:/var/www/html php:7.2-apache
 move_uploaded_file을 이용하여 파일을 업로드 하는 코드
 
 ```
-<?php
+    <?php
 
-$uploaddir = '/var/www/html/uploads/';
-$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+    $uploaddir = '/var/www/html/uploads/';
+    $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
-echo '<pre>';
-if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-    echo "파일이 유효하고, 성공적으로 업로드 되었습니다.\n";
-} else {
-    print "파일 업로드 실패";
-}
+    echo '<pre>';
+    if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
+        echo "파일이 유효하고, 성공적으로 업로드 되었습니다.\n";
+    } else {
+        print "파일 업로드 실패";
+    }
 
-echo '자세한 디버깅 정보입니다:';
-print_r($_FILES);
+    echo '자세한 디버깅 정보입니다:';
+    print_r($_FILES);
 
-print "</pre>";
+    print "</pre>";
 
-?>
+    ?>
 ```
 
 취약점을 가진 php파일을 생성후 
